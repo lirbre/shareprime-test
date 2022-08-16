@@ -1,74 +1,36 @@
-🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, VSCode, Netlify, PostCSS, Tailwind CSS.
+  Guide to Run Locally:
+-------------------------------------------------
+- Clone and Install with `npm install` or `yarn install`.
+  - Use `npm run dev` or `yarn dev` to run it as Dev.
+  - Access it On Vercel - [SharePrime Challenge - Breno Lira](https://shareprime-test-lirbre.vercel.app/)
 
-### Features
+ Sumary
+-------------------------------------------------
+- This project is made using SharePrime test requiriments.
+- It was made using Next.js, TypeScript and Tailwind. The information was dinamically generated and handled by Next.js router using simple Dinamically router - You can see it on `src/pages/list/[label].tsx`.
 
-Developer experience first:
+Home
+-------------------------------------------------
+![image](https://user-images.githubusercontent.com/86065449/184983681-467f6aaa-1eb4-42d0-975d-2f7e25837087.png)
+- Mocked information from my `useInfo` custom hook. In this home it shows the information from adding, editing or removing infos.
 
-- 🔥 [Next.js](https://nextjs.org) for Static Site Generator
-- 🎨 Integrate with [Tailwind CSS](https://tailwindcss.com)
-- 🎉 Type checking [TypeScript](https://www.typescriptlang.org)
-- ✅ Strict Mode for TypeScript and React 18
-- ✏️ Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
-- 💡 Absolute Imports
-- 🛠 Code Formatter with [Prettier](https://prettier.io)
-- 🦊 Husky for Git Hooks
-- 🚫 Lint-staged for running linters on Git staged files
-- 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
-- ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+List
+-------------------------------------------------
+![image](https://user-images.githubusercontent.com/86065449/184983842-f91228ae-a50f-4ace-acc8-48713a741665.png)
+- With a simple UI/UX shows the items as required.
 
-- 💻 [Components and Design Patterns](https://github.com/gabrieldemian/evil-nextjs-boilerplate/tree/dev)
+Edit
+-------------------------------------------------
+- A edit page dinamically generated.
+![image](https://user-images.githubusercontent.com/86065449/184983969-d144e071-c51c-49a0-bbe7-1cd1ad3337ea.png)
 
-### Getting started
+Admin
+-------------------------------------------------
+- A admin page to create new items.
+![image](https://user-images.githubusercontent.com/86065449/184984102-07495708-91a9-4c97-bcd1-98f1d03e5dbe.png)
 
-Run the following command on your local environment:
-
-```
-git clone git@github.com:gabrieldemian/evil-nextjs-boilerplate.git my-project-name
-cd my-project-name
-npm install
-```
-
-Then, you can run locally in development mode with live reload:
-
-```
-npm run dev
-```
-
-Open http://localhost:3000 with your favorite browser to see your project.
-
-```
-.
-├── README.md                # README file
-├── next.config.js           # Next JS configuration
-├── public                   # Public folder
-│   └── assets
-│       └── images           # Image used by default template
-├── src
-│   ├── components           # Components folder
-│   ├── layout               # Atomic layout components
-│   ├── pages                # Next JS pages
-│   ├── styles               # PostCSS style folder with Tailwind
-│   ├── templates            # Default template
-│   └── utils                # Utility folder
-├── tailwind.config.js       # Tailwind CSS configuration
-└── tsconfig.json            # TypeScript configuration
-```
-
-### Deploy to production
-
-You can see the results locally in production mode with:
-
-```
-$ yarn build
-$ yarn start
-```
-
-The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
-
-You can create an optimized production build with:
-
-```
-npm run build-prod
-```
-
-Now, it is ready to be deployed. All generated files are located at `out` folder, which you can deploy with any hosting service.
+Navbar
+-------------------------------------------------
+![image](https://user-images.githubusercontent.com/86065449/184984065-5b2a32b5-c849-4282-8207-c1c97ee38c4a.png)
+  
+  
