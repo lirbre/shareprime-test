@@ -8,7 +8,7 @@ import { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <ThemeProvider>
+  <ThemeProvider forcedTheme={'light'}>
     <Component {...pageProps} />
   </ThemeProvider>
 )
