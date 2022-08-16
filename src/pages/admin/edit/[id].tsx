@@ -17,8 +17,6 @@ const Index = () => {
     order: '1'
   })
 
-  console.log(formValues)
-
   const handleChange = (
     key: string,
     e: FormEvent<HTMLInputElement | HTMLTextAreaElement>
