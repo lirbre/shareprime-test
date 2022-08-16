@@ -12,27 +12,25 @@ interface ToDoProviderProps {
 export const InfoProvider = ({ children }: ToDoProviderProps) => {
   const [itemList, setItemList] = useState<ItemProps[]>([
     {
-      image:
-        'https://www.wikihow.com/images/thumb/f/fc/Get-the-URL-for-Pictures-Step-1-Version-6.jpg/v4-728px-Get-the-URL-for-Pictures-Step-1-Version-6.jpg',
-      link: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fagenciamoll.com.br%2Fwp-content%2Fuploads%2F2019%2F12%2FO-que-%25C3%25A9-URL-e-como-ela-Ajuda-na-sua-Estrat%25C3%25A9gia-Digital.jpg&imgrefurl=https%3A%2F%2Fagenciamoll.com.br%2Fo-que-e-url-e-como-ela-ajuda-na-sua-estrategia-digital%2F&tbnid=cWJNzoM0B_y5ZM&vet=12ahUKEwjYzrXw98v5AhWXBbkGHdiXCMIQMygBegUIARDfAQ..i&docid=P6ggEaEnGmyl8M&w=1600&h=1288&q=image%20url&ved=2ahUKEwjYzrXw98v5AhWXBbkGHdiXCMIQMygBegUIARDfAQ',
+      image: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
+      link: 'https://www.linkedin.com/in/lirbre/',
       order: 10,
-      title: 'google image',
+      title: 'Linkedin',
       id: 1
     },
     {
       image:
-        'https://www.wikihow.com/images/thumb/f/fc/Get-the-URL-for-Pictures-Step-1-Version-6.jpg/v4-728px-Get-the-URL-for-Pictures-Step-1-Version-6.jpg',
-      link: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fagenciamoll.com.br%2Fwp-content%2Fuploads%2F2019%2F12%2FO-que-%25C3%25A9-URL-e-como-ela-Ajuda-na-sua-Estrat%25C3%25A9gia-Digital.jpg&imgrefurl=https%3A%2F%2Fagenciamoll.com.br%2Fo-que-e-url-e-como-ela-ajuda-na-sua-estrategia-digital%2F&tbnid=cWJNzoM0B_y5ZM&vet=12ahUKEwjYzrXw98v5AhWXBbkGHdiXCMIQMygBegUIARDfAQ..i&docid=P6ggEaEnGmyl8M&w=1600&h=1288&q=image%20url&ved=2ahUKEwjYzrXw98v5AhWXBbkGHdiXCMIQMygBegUIARDfAQ',
+        'https://i.pinimg.com/originals/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.png',
+      link: 'https://github.com/lirbre',
       order: 11,
-      title: 'google image',
+      title: 'Github',
       id: 2
     },
     {
-      image:
-        'https://www.wikihow.com/images/thumb/f/fc/Get-the-URL-for-Pictures-Step-1-Version-6.jpg/v4-728px-Get-the-URL-for-Pictures-Step-1-Version-6.jpg',
-      link: 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fagenciamoll.com.br%2Fwp-content%2Fuploads%2F2019%2F12%2FO-que-%25C3%25A9-URL-e-como-ela-Ajuda-na-sua-Estrat%25C3%25A9gia-Digital.jpg&imgrefurl=https%3A%2F%2Fagenciamoll.com.br%2Fo-que-e-url-e-como-ela-ajuda-na-sua-estrategia-digital%2F&tbnid=cWJNzoM0B_y5ZM&vet=12ahUKEwjYzrXw98v5AhWXBbkGHdiXCMIQMygBegUIARDfAQ..i&docid=P6ggEaEnGmyl8M&w=1600&h=1288&q=image%20url&ved=2ahUKEwjYzrXw98v5AhWXBbkGHdiXCMIQMygBegUIARDfAQ',
+      image: 'https://nerdin.com.br/img/empresa/2544.png',
+      link: 'https://www.shareprime.com.br/',
       order: 12,
-      title: 'google image',
+      title: 'Shareprime',
       id: 3
     }
   ])
@@ -41,7 +39,7 @@ export const InfoProvider = ({ children }: ToDoProviderProps) => {
     setItemList([
       ...itemList,
       {
-        id: 1,
+        id: Math.max(...itemList.map((item) => item.id)) + 1,
         image,
         link,
         order,

@@ -39,14 +39,19 @@ const Admin = () => {
     const { image, link, id, order, title } = formValues
 
     const isImageValid = !ImageRegex.test(image)
-    const isLinKValid = !LinkRegex.test(link)
+    const isLinkValid = !LinkRegex.test(link)
+
+    if (title.split('').length > 50) {
+      toast.warn('O titulo deve ter, no máximo, 50 caracteres.')
+      return
+    }
 
     if (isImageValid) {
       toast.warn('A Imagem precisa ser um URL válido.')
       return
     }
 
-    if (isLinKValid) {
+    if (isLinkValid) {
       toast.warn('O Link precisa ser um URL válido.')
       return
     }

@@ -10,16 +10,18 @@ export const ListEdit = () => {
 
   const memoizedCards = useMemo(
     () =>
-      (itemList || []).map(({ image, link, order, title, id }: ItemProps) => (
-        <EditCard
-          key={id}
-          image={image}
-          link={link}
-          order={order}
-          title={title}
-          id={id}
-        />
-      )),
+      (itemList || [])
+        .sort((a, b) => b.order - a.order)
+        .map(({ image, link, order, title, id }: ItemProps) => (
+          <EditCard
+            key={id}
+            image={image}
+            link={link}
+            order={order}
+            title={title}
+            id={id}
+          />
+        )),
     [itemList]
   )
 
