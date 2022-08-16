@@ -10,11 +10,14 @@ import { ThemeProvider } from 'next-themes'
 import { ToastContainer } from 'react-toastify'
 
 import { Navbar } from '@/components'
+import { InfoProvider } from '@/context/info-context'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider forcedTheme={'light'}>
     <Navbar />
-    <Component {...pageProps} />
+    <InfoProvider>
+      <Component {...pageProps} />
+    </InfoProvider>
     <ToastContainer toastClassName="text-sm" />
   </ThemeProvider>
 )
