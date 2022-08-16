@@ -12,18 +12,18 @@ export const Navbar = () => {
           height={38}
           width={35}
           onClick={() => router.replace('/')}
+          className="cursor-pointer"
         />
         <ul className="flex h-[69px] items-center gap-4 pr-4 md:gap-[60px]">
           <li
-            className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500]"
+            className={`cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500] ${
+              router.pathname === '/admin' && 'text-[#ffb500]'
+            }`}
             onClick={() => router.push('/admin')}
           >
             <small className="font-black">Admin</small>
           </li>
-          <li
-            className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500]"
-            onClick={() => router.push('/admin')}
-          >
+          <li className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500]">
             <a
               href="https://github.com/lirbre/shareprime-test"
               target="_blank"
@@ -32,10 +32,7 @@ export const Navbar = () => {
               <small className="font-black">Github</small>
             </a>
           </li>
-          <li
-            className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500]"
-            onClick={() => router.push('/admin')}
-          >
+          <li className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500]">
             <a
               href="https://www.linkedin.com/in/lirbre/"
               target="_blank"
