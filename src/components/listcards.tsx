@@ -25,6 +25,8 @@ export const ListCards = () => {
   )
 
   return (
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">{memoizedCards}</div>
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+      {itemList.length > 0 ? memoizedCards : 'Não há nenhum item salvo.'}
+    </div>
   )
 }

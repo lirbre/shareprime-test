@@ -12,7 +12,7 @@ import { ImageRegex, LinkRegex } from '@/utils'
 const Index = () => {
   const router = useRouter()
   const { id } = router.query
-  const { editItem, itemList } = useInfo()
+  const { editItem, removeItem, itemList } = useInfo()
   const selected = useMemo(
     () => itemList.find((item) => item.id === +id!),
     [id]
@@ -81,6 +81,10 @@ const Index = () => {
 
   useEffect(() => {
     if (!id) return
+    if (!selected) {
+      router.push('/admin/edit')
+      return
+    }
     setFormValues({
       id: selected!.id,
       image: selected!.image,
@@ -88,7 +92,7 @@ const Index = () => {
       order: selected!.order,
       title: selected!.title
     })
-  }, [id])
+  }, [id, selected])
 
   return (
     <Main
@@ -100,7 +104,18 @@ const Index = () => {
       }
     >
       <div className="container pb-8">
-        <h6 className="mb-6 font-black text-[#000]">Editando - Item {id}</h6>
+        <div className="flex w-full items-center justify-between">
+          <h6 className="mb-6 font-black text-[#000]">Editando - Item {id}</h6>
+          <DefaultButton
+            onClick={() => {
+              removeItem(+id! || 0)
+              router.push('/admin/edit')
+            }}
+            className="w-1/2"
+          >
+            Delete esse Item
+          </DefaultButton>
+        </div>
         <form
           onSubmit={(e) => handleSubmit(e)}
           className="flex flex-col gap-4 px-2"

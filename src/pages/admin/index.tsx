@@ -18,7 +18,7 @@ const Admin = () => {
     order: 0,
     id: 100
   })
-  const { addItem } = useInfo()
+  const { addItem, itemList } = useInfo()
 
   const handleChange = (
     key: string,
@@ -80,7 +80,14 @@ const Admin = () => {
       <div className="container pb-8">
         <h6 className="mb-3 font-black text-[#000]">Adicione novos Items:</h6>
         <p
-          onClick={() => router.push('/admin/edit')}
+          onClick={() => {
+            if (itemList.length === 0) {
+              toast.warn('Não há nenhum item salvo.')
+              return
+            }
+
+            router.push('/admin/edit')
+          }}
           className="mb-6 cursor-pointer italic underline opacity-80 hover:opacity-70"
         >
           Clique aqui para editar os Items:
