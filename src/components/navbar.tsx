@@ -11,6 +11,7 @@ export const Navbar = () => {
           src="https://www.shareprime.com.br/images/Menu/logo-shareprime-active.png"
           height={38}
           width={35}
+          onClick={() => router.replace('/')}
         />
         <ul className="flex h-[69px] items-center gap-4 pr-4 md:gap-[60px]">
           <li
