@@ -12,6 +12,7 @@ export const Navbar = () => {
           height={38}
           width={35}
           onClick={() => router.replace('/')}
+          alt={'SharePrime logo'}
           className="cursor-pointer"
         />
         <ul className="flex h-[69px] items-center gap-4 pr-4 md:gap-[60px]">
