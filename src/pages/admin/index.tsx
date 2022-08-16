@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { FormEvent, SyntheticEvent, useMemo, useState } from 'react'
 import { toast } from 'react-toastify'
 
+import { useInfo } from '@/hooks'
 import { Meta } from '@/layouts'
 import { Main } from '@/templates'
 import { ItemProps } from '@/typings/items'
@@ -17,6 +18,7 @@ const Admin = () => {
     order: 0,
     id: 100
   })
+  const { addItem } = useInfo()
 
   const handleChange = (
     key: string,
@@ -34,7 +36,7 @@ const Admin = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const { image, link } = formValues
+    const { image, link, id, order, title } = formValues
 
     const isImageValid = !ImageRegex.test(image)
     const isLinKValid = !LinkRegex.test(link)
@@ -48,6 +50,8 @@ const Admin = () => {
       toast.warn('O Link precisa ser um URL válido.')
       return
     }
+
+    addItem({ id, image, link, order, title })
 
     toast.success('Adicionado um Novo Item!')
     setFormValues({
