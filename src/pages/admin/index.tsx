@@ -30,7 +30,7 @@ const Admin = () => {
         />
       }
     >
-      <div className="container">
+      <div className="container pb-8">
         <h6 className="mb-6 font-black text-[#000]">Adicione novos Items:</h6>
         <form className="flex flex-col gap-4 px-2">
           {useMemo(

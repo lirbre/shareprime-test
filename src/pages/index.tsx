@@ -1,3 +1,4 @@
+import { ListCards } from '@/components/listcards'
 import { Meta } from '@/layouts'
 import { Main } from '@/templates'
 
@@ -11,28 +12,9 @@ const Index = () => {
         />
       }
     >
-      <div className="container">
-        <h4>Sphinx of black quartz, judge my vow.</h4>
-        <h5>Sphinx of black quartz, judge my vow.</h5>
-        <h6>Sphinx of black quartz, judge my vow.</h6>
-        <p>
-          Sphinx of black quartz, judge my vow. Sphinx of black quartz, judge my
-          vow.Sphinx of black quartz, judge my vow. Sphinx of black quartz,
-          judge my vow. Sphinx of black quartz, judge my vow. Sphinx of black
-          quartz, judge my vow.
-        </p>
-        <p>
-          Sphinx of black quartz, judge my vow. Sphinx of black quartz, judge my
-          vow.Sphinx of black quartz, judge my vow. Sphinx of black quartz,
-          judge my vow. Sphinx of black quartz, judge my vow. Sphinx of black
-          quartz, judge my vow.
-        </p>
-        <p>
-          Sphinx of black quartz, judge my vow. Sphinx of black quartz, judge my
-          vow.Sphinx of black quartz, judge my vow. Sphinx of black quartz,
-          judge my vow. Sphinx of black quartz, judge my vow. Sphinx of black
-          quartz, judge my vow.
-        </p>
+      <div className="container pb-8">
+        <h6 className="mb-6 font-black text-[#000]">Listando os Items:</h6>
+        <ListCards />
       </div>
     </Main>
   )
