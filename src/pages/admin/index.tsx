@@ -1,4 +1,5 @@
 import { PrimaryButton, TextField } from '@fluentui/react'
+import { useRouter } from 'next/router'
 import { FormEvent, useMemo, useState } from 'react'
 
 import { Meta } from '@/layouts'
@@ -6,11 +7,13 @@ import { Main } from '@/templates'
 import { ItemProps } from '@/typings/items'
 
 const Admin = () => {
+  const router = useRouter()
   const [formValues, setFormValues] = useState<ItemProps>({
     title: 'as',
     image: '',
     link: '',
-    order: '1'
+    order: '1',
+    id: 100
   })
 
   const handleChange = (
@@ -31,7 +34,13 @@ const Admin = () => {
       }
     >
       <div className="container pb-8">
-        <h6 className="mb-6 font-black text-[#000]">Adicione novos Items:</h6>
+        <h6 className="mb-3 font-black text-[#000]">Adicione novos Items:</h6>
+        <p
+          onClick={() => router.push('/admin/edit')}
+          className="mb-6 cursor-pointer italic underline opacity-80 hover:opacity-70"
+        >
+          Clique aqui para editar os Items:
+        </p>
         <form className="flex flex-col gap-4 px-2">
           {useMemo(
             () => (

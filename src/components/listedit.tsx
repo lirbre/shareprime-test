@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 
 import { ItemProps } from '@/typings/items'
 
-import { ItemCard } from './itemcard'
+import { EditCard } from './editcard'
 
 const mockedItems: ItemProps[] = [
   {
@@ -31,11 +31,11 @@ const mockedItems: ItemProps[] = [
   }
 ]
 
-export const ListCards = () => {
+export const ListEdit = () => {
   const memoizedCards = useMemo(
     () =>
       mockedItems.map(({ image, link, order, title, id }) => (
-        <ItemCard
+        <EditCard
           key={id}
           image={image}
           link={link}

@@ -1,4 +1,4 @@
-import { ListCards } from '@/components'
+import { ListEdit } from '@/components'
 import { Meta } from '@/layouts'
 import { Main } from '@/templates'
 
@@ -14,7 +14,10 @@ const Index = () => {
     >
       <div className="container pb-8">
         <h6 className="mb-6 font-black text-[#000]">Listando os Items:</h6>
-        <ListCards />
+        <p className="mb-6 italic opacity-80">
+          Clique em um item para editá-lo:
+        </p>
+        <ListEdit />
       </div>
     </Main>
   )

@@ -3,4 +3,5 @@ export interface ItemProps {
   image: string
   link: string
   order: string
+  id: number
 }

@@ -1,4 +1,4 @@
-import { PrimaryButton, TextField } from '@fluentui/react'
+import { DefaultButton, PrimaryButton, TextField } from '@fluentui/react'
 import { useRouter } from 'next/router'
 import { FormEvent, useMemo, useState } from 'react'
 
@@ -14,7 +14,8 @@ const Index = () => {
     title: 'as',
     image: '',
     link: '',
-    order: '1'
+    order: '1',
+    id: 10
   })
 
   const handleChange = (
@@ -83,8 +84,14 @@ const Index = () => {
             [formValues.order]
           )}
           <PrimaryButton className="border text-[#000] duration-500">
-            Adicionar!
+            Salve!
           </PrimaryButton>
+          <DefaultButton
+            onClick={() => router.push('/admin/edit')}
+            className="border text-[#000] duration-500"
+          >
+            Cancele!
+          </DefaultButton>
         </form>
       </div>
     </Main>
