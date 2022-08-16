@@ -11,10 +11,10 @@ const Index = () => {
   const { id } = router.query
 
   const [formValues, setFormValues] = useState<ItemProps>({
-    title: 'as',
+    title: '',
     image: '',
     link: '',
-    order: '1',
+    order: 1,
     id: 10
   })
 
@@ -40,48 +40,36 @@ const Index = () => {
         <form className="flex flex-col gap-4 px-2">
           {useMemo(
             () => (
-              <TextField
-                onChange={(e) => handleChange('title', e)}
-                value={formValues.title}
-                label="Adicione um Titulo"
-                required
-              />
+              <>
+                <TextField
+                  onChange={(e) => handleChange('title', e)}
+                  value={formValues.title}
+                  label="Adicione um Titulo"
+                  required
+                />
+                <TextField
+                  onChange={(e) => handleChange('image', e)}
+                  value={formValues.image}
+                  label="Adicione uma Imagem"
+                  required
+                />
+
+                <TextField
+                  onChange={(e) => handleChange('link', e)}
+                  value={formValues.link}
+                  label="Adicone um Link"
+                  required
+                />
+                <TextField
+                  onChange={(e) => handleChange('order', e)}
+                  value={formValues.order.toString()}
+                  label="Adicone uma Ordem"
+                  type="number"
+                  required
+                />
+              </>
             ),
-            [formValues.title]
-          )}
-          {useMemo(
-            () => (
-              <TextField
-                onChange={(e) => handleChange('image', e)}
-                value={formValues.image}
-                label="Adicione uma Imagem"
-                required
-              />
-            ),
-            [formValues.image]
-          )}
-          {useMemo(
-            () => (
-              <TextField
-                onChange={(e) => handleChange('link', e)}
-                value={formValues.link}
-                label="Adicone um Link"
-                required
-              />
-            ),
-            [formValues.link]
-          )}
-          {useMemo(
-            () => (
-              <TextField
-                onChange={(e) => handleChange('order', e)}
-                value={formValues.order}
-                label="Adicone uma Ordem"
-                type="number"
-                required
-              />
-            ),
-            [formValues.order]
+            [formValues]
           )}
           <PrimaryButton className="border text-[#000] duration-500">
             Salve!

@@ -12,8 +12,10 @@ const Index = () => {
         />
       }
     >
-      <div className="container pb-8">
-        <h6 className="mb-6 font-black text-[#000]">Listando os Items:</h6>
+      <div className="container px-4 pb-8">
+        <h6 className="mb-6 font-black text-[#000]">
+          Listando os Items editáveis:
+        </h6>
         <p className="mb-6 italic opacity-80">
           Clique em um item para editá-lo:
         </p>
