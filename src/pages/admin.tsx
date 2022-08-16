@@ -1,3 +1,5 @@
+import { PrimaryButton, TextField } from '@fluentui/react'
+
 import { Meta } from '@/layouts'
 import { Main } from '@/templates'
 
@@ -12,27 +14,16 @@ const Admin = () => {
       }
     >
       <div className="container">
-        <h4>Sphinx of black quartz, judge my vow.</h4>
-        <h5>Sphinx of black quartz, judge my vow.</h5>
-        <h6>Sphinx of black quartz, judge my vow.</h6>
-        <p>
-          Sphinx of black quartz, judge my vow. Sphinx of black quartz, judge my
-          vow.Sphinx of black quartz, judge my vow. Sphinx of black quartz,
-          judge my vow. Sphinx of black quartz, judge my vow. Sphinx of black
-          quartz, judge my vow.
-        </p>
-        <p>
-          Sphinx of black quartz, judge my vow. Sphinx of black quartz, judge my
-          vow.Sphinx of black quartz, judge my vow. Sphinx of black quartz,
-          judge my vow. Sphinx of black quartz, judge my vow. Sphinx of black
-          quartz, judge my vow.
-        </p>
-        <p>
-          Sphinx of black quartz, judge my vow. Sphinx of black quartz, judge my
-          vow.Sphinx of black quartz, judge my vow. Sphinx of black quartz,
-          judge my vow. Sphinx of black quartz, judge my vow. Sphinx of black
-          quartz, judge my vow.
-        </p>
+        <h6 className="mb-6 font-black text-[#000]">Adicione novos Items:</h6>
+        <form className="flex flex-col gap-4 px-2">
+          <TextField label="Adicione um Titulo" type="text" required />
+          <TextField label="Adicione uma Imagem" type="link" required />
+          <TextField label="Adicone um Link" type="link" required />
+          <TextField label="Adicone uma Ordem" type="number" required />
+          <PrimaryButton className="border text-[#000] duration-500">
+            Adicionar!
+          </PrimaryButton>
+        </form>
       </div>
     </Main>
   )
