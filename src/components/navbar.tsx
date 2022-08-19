@@ -17,14 +17,14 @@ export const Navbar = () => {
         />
         <ul className="flex h-[69px] items-center gap-4 pr-4 md:gap-[60px]">
           <li
-            className={`cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500] ${
+            className={`cursor-pointer border-[#ffb500] after:block after:transition-all after:duration-1000 transition-all duration-500 ease-linear after:h-[3px] after:w-0 after:hover:w-full after:bg-[#ffb500] hover:text-[#ffb500] ${
               router.pathname === '/admin' && 'text-[#ffb500]'
             }`}
             onClick={() => router.push('/admin')}
           >
             <small className="font-black">Admin</small>
           </li>
-          <li className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500]">
+          <li className="h-[30px] cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear after:block after:h-[3px] after:w-0 after:bg-[#ffb500] after:transition-all after:duration-1000 hover:text-[#ffb500] after:hover:w-full">
             <a
               href="https://github.com/lirbre/shareprime-test"
               target="_blank"
@@ -33,7 +33,7 @@ export const Navbar = () => {
               <small className="font-black">Github</small>
             </a>
           </li>
-          <li className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear hover:border-b-2 hover:text-[#ffb500]">
+          <li className="h-[30px] cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear after:block after:h-[3px] after:w-0 after:bg-[#ffb500] after:transition-all after:duration-1000 hover:text-[#ffb500] after:hover:w-full">
             <a
               href="https://www.linkedin.com/in/lirbre/"
               target="_blank"
