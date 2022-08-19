@@ -24,7 +24,7 @@ export const Navbar = () => {
           >
             <small className="font-black">Admin</small>
           </li>
-          <li className="h-[30px] cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear after:block after:h-[3px] after:w-0 after:bg-[#ffb500] after:transition-all after:duration-1000 hover:text-[#ffb500] after:hover:w-full">
+          <li className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear after:block after:h-[3px] after:w-0 after:bg-[#ffb500] after:transition-all after:duration-1000 hover:text-[#ffb500] after:hover:w-full">
             <a
               href="https://github.com/lirbre/shareprime-test"
               target="_blank"
@@ -33,7 +33,7 @@ export const Navbar = () => {
               <small className="font-black">Github</small>
             </a>
           </li>
-          <li className="h-[30px] cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear after:block after:h-[3px] after:w-0 after:bg-[#ffb500] after:transition-all after:duration-1000 hover:text-[#ffb500] after:hover:w-full">
+          <li className="cursor-pointer border-[#ffb500] transition-all duration-500 ease-linear after:block after:h-[3px] after:w-0 after:bg-[#ffb500] after:transition-all after:duration-1000 hover:text-[#ffb500] after:hover:w-full">
             <a
               href="https://www.linkedin.com/in/lirbre/"
               target="_blank"
